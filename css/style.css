@@ -1,0 +1,27 @@
+.perfil-avatar{
+    display: flex;
+    align-items: center;
+    gap: 10px ;
+    }
+    .Foto-perfil{
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: #444;
+    }
+body{
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 216, 164);
+    color: #333;
+ 
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+header{
+    background-color: #dda82c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
