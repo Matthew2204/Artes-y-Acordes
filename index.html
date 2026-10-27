@@ -17,12 +17,12 @@
                 <ul>
                     <li><a href="#Inicio">Inicio</a></li>
                     <li><a href="#Publicaciones">Publicaciones</a></li>
-                    <li><a href="#Crear-Publicacion">Crear publiocacion</a></li>
+                    <li><a href="#Crear-Publicacion">Crear publicacion</a></li>
                     <li><a href="#Perfil">Perfil</a></li>
                     <li><a href="#Acerca-de">Acerca de</a></li>
                 </ul>
             </nav>
-        </header>
+    </header>
  
         <main><!--Contenido principal-->
  
@@ -31,6 +31,7 @@
                 <h2>Bienvenid@ a nuestra querida comunidad</h2>
                 <p>Explora las creaciones artisticas, intereses musicales del momento y obras magnificas hechas por usuarios apasionados</p>
              </section>
+             <hr>
  
               <!--Seccion 2: Publicaciones-->
               <section id="Publicaciones">
@@ -44,10 +45,14 @@
                      <h3>VmFabss</h3>
                 </div>
                 <p class="Categoria"><strong>Categoria: </strong>Musica</p>
+                <img src="" alt="Portada de algun album de Billie">
                 <p class="Contenido">¿Ya escucharon el nuevo album de Billie eilish? Es fenomenal! Tiene canciones muy profundas conm las cuales puedes identificarte, mi favorita es: "my future",
                     habla sobre el como estamos enamorados de nuestro futuro, es totalmente inspirador!!
                 </p>
-                <button class="boton-like">Me gusta (<span class="contador-likes">5</span>)</button>
+                <button class="boton-like">
+                    <span class="icono-corazon">🤎</span>
+                    <span class="contador-likes">23k</span>
+                </button>
              </article>
  
              <!-- Segunda publicacion-->
@@ -57,8 +62,12 @@
                   <h3>_leandrovrg</h3>
               </div>
               <p class="Categoria"><strong>Categoria: </strong>Animales</p>
+              <img src="" alt="Foto de Leandro con Urco">
               <p class="Contenido">¿Ya han visto a mi perrito Urco? Es taaan tierno, me encanta cuando hace trucos, desde que tengo memoria siempre ha sido un experto en atrapar la pelota. 🤍</p>
-              <button class="boton-like">Me gusta ( <span class="contador-likes">879</span>)</button>
+              <button class="boton-like">
+                <span class="icono-corazon">🤎</span>
+                <span class="contador-likes">364k</span>
+              </button>
               </article>
  
               <!--Tercera publicacion-->
@@ -68,14 +77,18 @@
                    <h3>axl_.047</h3>
                 </div>
                 <p class="Categoria"><strong>Categoria: </strong>Instrumento</p>
+                <img src="" alt="">
                 <p class="Contenido">🎸🎸</p>
-                <button class="boton-like">Me gusta (<span class="contador-likes">6742</span>)</button>
+                <button class="boton-like">
+                    <span class="icono-corazon">🤎</span>
+                    <span class="contador-likes">3k</span>
+                </button>
               </article>
            </section>
  
            <!-- Seccion 3: Crear Publicacion -->
-            <section id="#Crear-Publicacion">
-                <H2>Crear una nueva publicacion</H2>
+            <section id="Crear-Publicacion">
+                <h2>¡Crea una nueva publicacion!</h2>
                 <form>
                     <div>
                         <label for="nombre">Nombre de Usuario:</label><br>
@@ -83,14 +96,56 @@
                     </div>
                     <br>
                     <div>
-                       
+                        <label for="contenido-post">Contenido</label><br>
+                        <textarea id="contenido-post" rows="4" required placeholder="¿Que deseas compartir hoy"></textarea>
                     </div>
+                    <br>
+                    <div>
+                        <label for="categoria-post" >Categoria:</label>
+                        <select id="categoria-post">
+                            <option value="Musica">Musica</option>
+                            <option value="Animales">Animales</option>
+                            <option value="Instrumento">Instrumentos</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                    <br>
+                    <button type="submit">Publicar</button>
                 </form>
- 
+             </section>
+
+             <!--Seccion 4: Perfil del usuario-->
+             <section id="Perfil">
+                <h2>Mi perfil</h2>
+                <hr>
+                <div class="Tarjeta-perfil">
+                    <h3>Usuario: Halleymatt</h3>
+                    <h3>Foto de Perfil:</h3><br>
+                    <img src="" alt="Foto de perfil redondeada" class="Foto-perfil-redondeada">
+                    <p><strong>Sobre mí:</strong>Me gusta mucho los atardeceres, salir a caminar,
+                   todos los albumes de Billie Eilish y hacer muchos amigos!!</p><br>
+                   <p><strong>hobbies Principales:</strong>Salir a ver los atardeceres, ir a Orquesta los miercoles,
+                    ir a clases de canto con la profe @pilar_1499, salir a dar vueltas con @takiss_r , @nik00_pretty y @viktorr_299 </p>
+                </div><br>
+                <hr>
+                <br>
             </section>
- 
- 
-        </main>
+
+            <!--Seccion 5: Acerca de-->
+             <section id="Acerca-de">
+                <h2>Acerca de Artes y Acordes:</h2>
+                <p><strong>¿Qué es esta plataforma?</strong> "Artes y Acordes" es una red social creada para unir a personas apasionadas por la música,
+                 el arte, las mascotas y los hobbies creativos.</p>
+                <p><strong>Misión:</strong> Brindar un espacio seguro y dinámico donde los usuarios puedan compartir sus gustos,
+                 descubrir talento y expresarse con libertad.</p>
+             </section>
+         </main>
+
+         <!-- Pie de página (Footer) -->
+    <footer>
+        <p>&copy; 2026 Artes y Acordes. Todos los derechos reservados.</p>
+        <p>Desarrollado con pasión para la clase de Programación Web.</p>
+    </footer>
    
 </body>
 </html>
