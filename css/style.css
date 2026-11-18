@@ -126,7 +126,7 @@ section {
     transition: border-color 0.3s ease;/* Suaviza cualquier cambio en el borde */
 }
 #Crear-publicacion input [type=text]:focus,
-#Crear-Publicacion textarea:focus
+#Crear-Publicacion textarea:focus,
 #Crear-Publicacion select:focus{
     outline: none;/* Quita el borde azul por defecto que ponen los navegadores */
     border-color: #6b4423;   /* Cambia el borde a un café más intenso para indicar que está activo */

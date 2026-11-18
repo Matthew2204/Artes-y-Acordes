@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artes, Acordes, ¡Red social de Hobibes!</title><!--Titulo de la red social-->
+    <title>Artes, Acordes, ¡Red social de Hobbies!</title><!--Titulo de la red social-->
     <link rel="stylesheet" href="/css/style.css">
+    <script src="js/script.js"></script>
+    
+    
 </head>
 <body>
  
@@ -34,7 +37,7 @@
              <hr>
  
               <!--Seccion 2: Publicaciones-->
-              <section id="Publicaciones">
+              <section class="seccion-publicaciones"></section>
                 <h2>Publicaciones recientes</h2>
  
                 <div id="Contenedor-posts">
@@ -46,12 +49,12 @@
                 </div>
                 <p class="Categoria"><strong>Categoria: </strong>Musica</p>
                 <img src="" alt="Portada de algun album de Billie">
-                <p class="Contenido">¿Ya escucharon el nuevo album de Billie eilish? Es fenomenal! Tiene canciones muy profundas conm las cuales puedes identificarte, mi favorita es: "my future",
+                <p class="Contenido">¿Ya escucharon el nuevo album de Billie eilish? Es fenomenal! Tiene canciones muy profundas con las cuales puedes identificarte, mi favorita es: "my future",
                     habla sobre el como estamos enamorados de nuestro futuro, es totalmente inspirador!!
                 </p>
-                <button class="boton-like">
+                <button class="boton-like" onclick="darLike(1)">
                     <span class="icono-corazon">🤎</span>
-                    <span class="contador-likes">23000</span>
+                    <span class="contador-likes" id="Likes-1">23000</span>
                 </button>
              </article>
  
@@ -64,9 +67,9 @@
               <p class="Categoria"><strong>Categoria: </strong>Animales</p>
               <img src="" alt="Foto de Leandro con Urco">
               <p class="Contenido">¿Ya han visto a mi perrito Urco? Es taaan tierno, me encanta cuando hace trucos, desde que tengo memoria siempre ha sido un experto en atrapar la pelota. 🤍</p>
-              <button class="boton-like">
+              <button class="boton-like" onclick="darLike(2)">
                 <span class="icono-corazon">🤎</span>
-                <span class="contador-likes">364000</span>
+                <span class="contador-likes" id="Likes-2">364000</span>
               </button>
               </article>
  
@@ -79,9 +82,9 @@
                 <p class="Categoria"><strong>Categoria: </strong>Instrumento</p>
                 <img src="" alt="">
                 <p class="Contenido">🎸🎸</p>
-                <button class="boton-like">
+                <button class="boton-like" onclick="darLike(3)">
                     <span class="icono-corazon">🤎</span>
-                    <span class="contador-likes">3000</span>
+                    <span class="contador-likes" id="Likes-3">3000</span>
                 </button>
               </article>
            </section>
@@ -148,5 +151,6 @@
     </footer>
    <!-- Actualización para la rama footer -->
    <!-- Estilos y diseño finalizados para la red social -->
+   
 </body>
 </html>
