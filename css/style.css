@@ -125,7 +125,7 @@ section {
     box-sizing: border-box;/* Evita que el padding expanda el campo fuera del contenedor */
     transition: border-color 0.3s ease;/* Suaviza cualquier cambio en el borde */
 }
-#Crear-publicacion input [type=text]:focus,
+#Crear-Publicacion input[type=text]:focus,
 #Crear-Publicacion textarea:focus,
 #Crear-Publicacion select:focus{
     outline: none;/* Quita el borde azul por defecto que ponen los navegadores */
@@ -192,4 +192,29 @@ section {
         padding: 15px;
         box-sizing: border-box;
     }
+}
+/* Estilo para el botón de eliminar en la esquina superior derecha */
+.Post {
+    position: relative; /* IMPORTANTE: Esto le avisa al botón que debe guiarse por los límites de la tarjeta */
+}
+
+.boton-eliminar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #bc6c25; /* Tu tono café / terracota cálido */
+    color: #ffffff;            /* Texto blanco */
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;       /* Forma redondeada tipo píldora */
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover al pasar el mouse por encima */
+.boton-eliminar:hover {
+    background-color: #dda15e; /* Un tono café más claro y cálido */
+    transform: scale(1.05);    /* Crece ligeramente de forma sutil */
 }
