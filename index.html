@@ -25,7 +25,22 @@
                     <li><a href="#Acerca-de">Acerca de</a></li>
                 </ul>
             </nav>
+
+            
     </header>
+
+
+        <!-- Menú desplegable para filtrar por categoría -->
+            <div class="contenedor-filtro" style="margin-bottom: 20px; text-align: center;">
+                <label for="filtro-categoria" style="font-weight: bold; margin-right: 10px; color: #6b4423;">Filtrar por:</label>
+            <select id="filtro-categoria" onchange="filtrarPorSelect(this.value)" style="padding: 8px 12px; border-radius: 10px; border: 1px solid #bc6c25; background-color: #fff; cursor: pointer; font-weight: bold; color: #6b4423;">
+                  <option value="Todas">Todas las categorías</option>
+                  <option value="Musica">Música</option>
+                  <option value="Animales">Animales</option>
+                  <option value="Instrumento">Instrumento</option>
+                  <option value="Otros">Otro</option>
+            </select>
+            </div>
  
         <main><!--Contenido principal-->
  

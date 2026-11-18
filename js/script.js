@@ -43,13 +43,13 @@ function darLike(id) {
     }
 }
 
-// 3. Función para eliminar una publicación de forma segura
+// 3. Función para eliminar una publicación de forma segura (funciona tanto para las de HTML como para las nuevas)
 function eliminarPublicacion(id) {
-    // Borramos del arreglo
+    // Borramos del arreglo por si acaso
     publicaciones = publicaciones.filter(p => p.id !== id);
     
-    // Borramos únicamente el elemento article correspondiente en el HTML
-    const postElemento = document.getElementById(`post-${id}`);
+    // Borramos únicamente el elemento article correspondiente en el HTML (sea ID numérico o de texto)
+    const postElemento = document.getElementById(`post-${id}`) || document.getElementById(id);
     if (postElemento) {
         postElemento.remove();
     }
@@ -96,15 +96,8 @@ function agregarPublicacionAlDOM(pub) {
 // 5. Evento principal al cargar la página
 document.addEventListener("DOMContentLoaded", function() {
     
-    // Renderizamos las publicaciones iniciales del arreglo al cargar la página
-    const contenedorPosts = document.getElementById("Contenedor-posts");
-    if (contenedorPosts) {
-        contenedorPosts.innerHTML = ""; // Limpiamos solo el área de posts, sin tocar el resto de la página
-        publicaciones.forEach(pub => {
-            agregarPublicacionAlDOM(pub);
-        });
-    }
-
+    // NOTA: Eliminamos el contenedorPosts.innerHTML = "" para evitar que se borren el perfil, el formulario y el "acerca de".
+    
     // Lógica del formulario para nuevas publicaciones
     const formularioPost = document.querySelector("#Crear-Publicacion form");
 
@@ -134,10 +127,8 @@ document.addEventListener("DOMContentLoaded", function() {
             publicaciones.unshift(nuevaPublicacion); // Lo agregamos al inicio del arreglo
             
             // Agregamos la nueva publicación directamente arriba sin tocar el formulario ni el perfil
+            const contenedorPosts = document.getElementById("Contenedor-posts");
             if (contenedorPosts) {
-                // Creamos temporalmente el article nuevo y lo ponemos al principio del contenedor de posts
-                const tempDiv = document.createElement("div");
-                // Usamos la misma lógica creando el elemento limpio:
                 const article = document.createElement("article");
                 article.className = "Post";
                 article.id = `post-${nuevaPublicacion.id}`;
@@ -166,3 +157,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+// Función para filtrar usando el menú desplegable (<select>)
+function filtrarPorSelect(categoriaSeleccionada) {
+    const posts = document.querySelectorAll(".Post");
+
+    posts.forEach(post => {
+        const textoCategoria = post.querySelector(".Categoria") ? post.querySelector(".Categoria").innerText : "";
+
+        if (categoriaSeleccionada === 'Todas') {
+            post.style.display = "block"; // Muestra todas
+        } else {
+            if (textoCategoria.includes(categoriaSeleccionada)) {
+                post.style.display = "block"; // Muestra las que coinciden
+            } else {
+                post.style.display = "none";  // Oculta las demás
+            }
+        }
+    });
+}

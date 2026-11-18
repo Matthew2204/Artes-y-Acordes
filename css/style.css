@@ -218,3 +218,51 @@ section {
     background-color: #dda15e; /* Un tono café más claro y cálido */
     transform: scale(1.05);    /* Crece ligeramente de forma sutil */
 }
+
+/* Estilo para el contenedor del filtro */
+.contenedor-filtro {
+    background-color: #fdfbf7; /* Un fondo beige clarito muy acogedor */
+    padding: 12px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    border: 1px solid #e3d5ca;
+    box-shadow: 0 4px 6px rgba(107, 68, 35, 0.05);
+}
+
+/* Etiqueta del filtro */
+.contenedor-filtro label {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6b4423; /* Tu tono café oscuro principal */
+    margin-right: 8px;
+}
+
+/* Diseño del menú desplegable (<select>) */
+#filtro-categoria {
+    background-color: #ffffff;
+    color: #6b4423;              /* Texto café */
+    border: 2px solid #bc6c25;   /* Borde café terracota */
+    padding: 8px 14px;
+    border-radius: 20px;         /* Forma redondeada tipo píldora */
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor o hacer clic en el select */
+#filtro-categoria:hover, 
+#filtro-categoria:focus {
+    background-color: #faedcd;   /* Fondo beige cálido al interactuar */
+    border-color: #6b4423;       /* Se oscurece un poco el borde */
+    box-shadow: 0 0 5px rgba(188, 108, 37, 0.3);
+}
+
+/* Estilo para las opciones dentro del menú */
+#filtro-categoria option {
+    background-color: #ffffff;
+    color: #6b4423;
+    padding: 10px;
+}
